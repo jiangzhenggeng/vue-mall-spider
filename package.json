@@ -1,44 +1,23 @@
 {
-  "name": "vue-devtools",
-  "version": "3.1.5",
-  "description": "devtools for Vue.js!",
+  "name": "vue-mall-spider",
+  "version": "0.1.0",
+  "description": "vue-mall-spider",
   "main": "index.js",
   "scripts": {
-    "dev": "cd shells/dev && webpack-dev-server --inline --hot --no-info",
-    "dev:chrome": "cd shells/chrome && webpack --watch --hide-modules",
-    "dev:safari": "cd shells/safari && webpack --watch --hide-modules",
-    "lint": "eslint src --ext=js,vue && eslint shells/chrome/src && eslint shells/dev/src && eslint shells/safari/src",
-    "build": "cd shells/chrome && cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "build:safari": "cd shells/safari && NODE_ENV=production webpack --progress --hide-modules -p",
-    "run:firefox": "web-ext run -s shells/chrome -a dist -i src",
-    "zip": "npm run zip:chrome && npm run zip:firefox",
-    "zip:chrome": "cd shells && zip -r -FS ../dist/chrome.zip chrome -x *src/* -x *webpack.config.js",
-    "zip:firefox": "web-ext build -s shells/chrome -a dist -i src",
-    "release": "npm run test && npm run build && npm run zip",
-    "test": "npm run lint && bash test/test.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vuejs/vue-devtools.git"
+    "dev:chrome": "cd src/chrome && webpack --watch --hide-modules",
+    "build": "cd src/chrome && cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "keywords": [
-    "vue",
-    "devtools"
+    "jiguo",
+    "vue-mall-spider"
   ],
-  "author": "Evan You",
+  "author": "jiangzg",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuejs/vue-devtools/issues"
-  },
-  "homepage": "https://github.com/vuejs/vue-devtools#readme",
   "devDependencies": {
     "buble": "^0.16.0",
     "buble-loader": "^0.4.0",
-    "chromedriver": "^2.25.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.1",
-    "eslint": "^3.19.0",
-    "eslint-plugin-vue-libs": "^1.2.0",
     "file-loader": "^1.1.5",
     "friendly-errors-webpack-plugin": "^1.1.2",
     "nightwatch": "^0.9.4",
