@@ -8,7 +8,9 @@ var bubleOptions = {
 
 module.exports = {
   entry: {
-    'spider-background': './src/spider-background.js'
+    'spider-background': './background/spider-background.js',
+		'create-collect': './script/create-collect.js',
+		'create-spread': './script/create-spread.js'
   },
   output: {
     path: path.join(__dirname, 'build'),

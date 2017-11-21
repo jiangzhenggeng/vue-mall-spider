@@ -1,0 +1,1 @@
+export const extPath = chrome.extension.getURL('')

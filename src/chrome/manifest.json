@@ -20,7 +20,7 @@
   "options_page": "options-setting.html",
   "web_accessible_resources": ["*"],
   "background": {
-    "page":"spider-background.html",
+    "page":"background/spider-background.html",
     "persistent": false
   },
   "permissions": [
@@ -55,17 +55,8 @@
         "*://*.yougou.com/*"
       ],
       "js": [
-        "script/libs/vue.min.js",
-        "script/libs/jquery-2.2.3.js",
-        "script/libs/jquery.qrcode.min.js",
-        "script/libs/store.js",
-        "script/extend.js",
-        "script/config/url.config.js",
-        "script/main.js"
-      ],
-      "css":[
-        "style/base.css",
-        "style/model.css"
+        "build/create-collect.js",
+        "build/create-spread.js"
       ]
     }
   ]
